@@ -1,0 +1,15 @@
+﻿<Window x:Class="work4.MagazineForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:work4"
+        mc:Ignorable="d"
+        Title="Magazine" Height="175" Width="320" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+        <Button Content="Підтвердити" HorizontalAlignment="Left" Height="37" Margin="192,92,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click"/>
+        <Label Content="Введніть назву нового журналу:" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" Width="226"/>
+        <TextBox HorizontalAlignment="Left" Margin="17,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Height="24" TextChanged="TextBox_TextChanged" PreviewTextInput="TextBox_LimitTextInput"/>
+
+    </Grid>
+</Window>
