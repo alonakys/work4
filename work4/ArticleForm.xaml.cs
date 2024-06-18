@@ -68,11 +68,19 @@ namespace work4
             else
             {
                 MainWindow.isDataSaved = true;
-                Article article = new Article(selectedMagazine, author, title, pages, fee);
-                article.SaveToJSON(filePathArticle);
-                MessageBox.Show("Дані були успішно внесені!");
-                this.Close();
-                MainWindow.isDataSaved = false;
+                int num;
+                if (int.TryParse(pages,out num))
+                {
+                    Article article = new Article(selectedMagazine, author, title, pages, fee);
+                    article.SaveToJSON(filePathArticle);
+                    MessageBox.Show("Дані були успішно внесені!");
+                    this.Close();
+                    MainWindow.isDataSaved = false;
+                }
+                else
+                {
+                    MessageBox.Show("Помилка у введені кількості сторінок!");
+                }
             }
         }
 

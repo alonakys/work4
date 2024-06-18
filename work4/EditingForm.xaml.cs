@@ -76,12 +76,20 @@ namespace work4
             else
             {
                 MainWindow.isDataSaved = true;
-                MessageBox.Show("Дані було успішно відредаговані!");
                 SavedTitle = CurrentTitle;
-                SavedPages = CurrentPages;
+                int num;
+                if (int.TryParse(TextBox_Pages.Text, out num))
+                {
+                    SavedPages = CurrentPages;
+                }
+                else
+                {
+                    MessageBox.Show("Сторінки введено не коректно, збережені попередньовведені дані");
+                }
                 SavedFee = CurrentFee;
                 SavedFirstName = CurrentFirstName;
                 SavedLastName = CurrentLastName;
+                MessageBox.Show("Дані було успішно відредаговані!");
                 this.Close();
                 MainWindow.isDataSaved = false;
             }
